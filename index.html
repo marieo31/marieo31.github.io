@@ -1,22 +1,129 @@
 <!DOCTYPE html>
+<!-- LANDING PAGE -->
+<!--    * An explanation of the project.
+        * Links to each visualizations page. -->
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Marie-Océane Parent</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Coppied from https://code.jquery.com/ -->
+    <script     src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+   
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <link rel="stylesheet" href="style.css">    
+    <title>Coordinates & Weather</title>     
 </head>
-<img src="./Resources/20160514_192336.jpg " width="50%" alt="Moto doudou">
 <body>
-    <h1>Marie-Océane Parent</h1>
+
+
+        <!-- Importing the Navbar -->
+        <!-- <div w3-include-html="Elements/navbar.html"></div> -->
+        <!-- <link rel="import" href="Elements/navbar.html"> -->
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="home.html" id="navbar_title">
+                  Coordinates vs Weather
+              </a>
+            </div>
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+              </ul>
+              <ul class="nav navbar-nav navbar-right">  
+                  <li><a href="home.html"><i class="glyphicon glyphicon-home"></i></a></li>                
+                  <li class=nav_right><a href="comparison.html">Comparison</a></li>
+                  <li class=nav_right><a href="data.html">Data</a></li>
+                  <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                                  <li class=nav_right><a href="vis1_longlat.html">Cities data-set</a></li>
+                                  <li role="separator" class="divider"></li>
+                                  <li class=nav_right><a href="vis2_coordTemp.html">Coordinates vs. Temp</a></li>
+                                  <li class=nav_right><a href="vis3_coordHumidity.html">Coordinates vs. Humidity</a></li>
+                                  <li class=nav_right><a href="vis4_coordCloudiness.html">Coordinates vs. Cloudiness</a></li>
+                                  <li class=nav_right><a href="vis5_coordWind.html">Coordinates vs. Wind</a></li>
+                          </ul>
+                        </li>                        
+  
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+
+
+
+<div class="container">
+
+  <div class="row">
+      <div class="col-md-8">
+        <div class="box">
+            <h1>Coordinates vs. X</h1>
+
+            <a href="vis1_longlat.html"><img class=big_img width=350px src="Resources/fig1_cities_positions.png" alt="Cities position"></a>          
+  
+            <p>The purpose of the project was to analyze how weather changes as you get closer to the equator and if trends can be observed on the positions of cities on the globe.
+              To accomplish this analysis, we builded a set of ramdom 
+              coordinates, identified the related cities and pulled weather data from the OpenWeatherMap API.
+                
+            </p>
+        
+            <p>After assembling the dataset, we used Matplotlib to display various aspects of the weather vs. global coordinates, latitude and longitude.
+              Factor we looked at included: Temperature, Cloudiness, Humidity and Wind speed. 
+            </p>
+        
+            <p>This site provides the source data and visualizations created as part of the analysis, as well as description of any trends and correlation witnessed.</p>
+        
+        </div>
+
+      
+          
+      </div>
+
+      <div class="col-sm-12 col-md-4">
+          <div class="box">
+              <h2>Visualizations</h2>    
+                  <div class="box_img">
+                      <a href="vis2_coordTemp.html"><img class=small_img width=160px src="Resources/fig3_coord_MaxTemp.png" alt="Temperature plot"></a>
+                  </div>
+                  <div class="box_img">
+                      <a href="vis3_coordHumidity.html"><img class=small_img width=160px src="Resources/fig4_coord_Humidity.png" alt="Humidity plot"></a>
+                  </div>
+                  <div class="box_img">
+                      <a href="vis4_coordCloudiness.html"><img class=small_img width=160px src="Resources/fig5_coord_Clouds.png" alt="Cloud plots"></a>
+                  </div>
+                  <div class="box_img">
+                      <a href="vis5_coordWind.html"><img class=small_img width=160px src="Resources/fig6_coord_WindSpeed.png" alt="Wind plots"></a>   
+                  </div>                
+   
+              
+          </div>
+
+      </div>
+
+  </div>
+
+
+
+
+</div>        
+
+
+
     
-    <p> like to travel to remote place </p>
-    <ul>
-        <li><a href="">My facebook page</a> --> I don't have a facebook</li>
-        <li><a href="">My linkedin page</a></li>
-    </ul>
-
-        <a href="http://www.google.com" target=_blank>Google search</a>
-
 </body>
 </html>
