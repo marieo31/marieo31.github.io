@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<!-- A descriptive title and heading tag.
+The plot/visualization itself for the selected comparison.
+A paragraph describing the plot and its significance -->
+
+<!--    * Has the name of the site on the left of the nav which allows users 
+        to return to the landing page from any page.
+        * Contains a dropdown on the right of the navbar named "Plots" which provides 
+        links to each individual visualization page.
+        * Provides two more links on the right: "Comparisons" which links to the comparisons page, 
+        and "Data" which links to the data page.
+        * Is responsive (using media queries). The nav must have similar behavior as the screenshots 
+        "Navigation Menu" section (notice the background color change). -->
+
+<html lang="en">
+        <head>
+                <meta charset="UTF-8">
+                <!-- Latest compiled and minified CSS -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+                <!-- Optional theme -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+                <!-- Coppied from https://code.jquery.com/ -->
+                <script     src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+                <!-- Latest compiled and minified JavaScript -->
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
+                <!-- <link rel="stylesheet" href="reset.css"> -->
+                <link rel="stylesheet" href="style.css">    
+                <title>Coordinates & Wind</title>    
+        </head>
+
+<body>
+        <!-- Importing the Navbar -->
+        <!-- <div w3-include-html="Elements/navbar.html"></div> -->
+        <!-- <link rel="import" href="Elements/navbar.html"> -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="home.html" id="navbar_title">
+                    Coordinates vs Weather
+                </a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">  
+                    <li><a href="home.html"><i class="glyphicon glyphicon-home"></i></a></li>                
+                    <li class=nav_right><a href="comparison.html">Comparison</a></li>
+                    <li class=nav_right><a href="data.html">Data</a></li>
+                    <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                    <li class=nav_right><a href="vis1_longlat.html">Cities data-set</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class=nav_right><a href="vis2_coordTemp.html">Coordinates vs. Temp</a></li>
+                                    <li class=nav_right><a href="vis3_coordHumidity.html">Coordinates vs. Humidity</a></li>
+                                    <li class=nav_right><a href="vis4_coordCloudiness.html">Coordinates vs. Cloudiness</a></li>
+                                    <li class=nav_right><a href="vis5_coordWind.html">Coordinates vs. Wind</a></li>
+                            </ul>
+                          </li>                        
+    
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+          </nav>  
+
+
+          <div class="container">
+
+              <div class="row">
+                  <div class="col-md-8">
+                    <div class="box">
+                        <h1>Coordinates vs. Wind speed</h1>
+                        <div class="box2">
+
+                            <img width=600px src="Resources/fig6_coord_WindSpeed.png" alt="Coord and wind">
+
+                        </div>
+                        
+                        <p>No strong correlation between coordinates and wind.</p>
+                        <p>It seems that we see more wind on the coasts though.</p>
+
+                    </div>
+            
+                  
+                      
+                  </div>
+            
+                  <div class="col-sm-12 col-md-4">
+                      <div class="box">
+                          <h2>Visualizations</h2>    
+                              <div class="box_img" >
+                                  <a href="vis2_coordTemp.html"><img class=small_img width=150px src="Resources/fig3_coord_MaxTemp.png" alt="Temperature plot"></a>
+                              </div>
+                              <div class="box_img">
+                                  <a href="vis3_coordHumidity.html"><img class=small_img width=150px src="Resources/fig4_coord_Humidity.png" alt="Humidity plot"></a>
+                              </div>
+                              <div class="box_img">
+                                  <a href="vis4_coordCloudiness.html"><img class=small_img width=150px src="Resources/fig5_coord_Clouds.png" alt="Cloud plots"></a>
+                              </div>
+                              <div class="box_img" id="highlight">
+                                  <a href="vis5_coordWind.html"><img class=small_img width=150px src="Resources/fig6_coord_WindSpeed.png" alt="Wind plots"></a>   
+                              </div>                
+               
+                          
+                      </div>
+            
+                  </div>
+            
+              </div>
+            </div> 
+
+
+
+</body>
+</html>
